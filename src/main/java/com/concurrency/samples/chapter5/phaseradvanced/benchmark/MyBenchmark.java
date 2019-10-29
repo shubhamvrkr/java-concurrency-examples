@@ -74,7 +74,7 @@ public class MyBenchmark {
 		try {
 
 			int[][] distanceMatrix;
-			distanceMatrix = DataLoader.load(Paths.get("data", name + ".txt"));
+			distanceMatrix = DataLoader.load(Paths.get("chapter5_data", name + ".txt"));
 
 			SerialGeneticAlgorithm serialGeneticAlgorithm = new SerialGeneticAlgorithm(distanceMatrix, generations,
 					individuals);
@@ -102,7 +102,7 @@ public class MyBenchmark {
 	public void concurrentGeneticAlgorithm() {
 		try {
 
-			int[][] distanceMatrix = DataLoader.load(Paths.get("data", name + ".txt"));
+			int[][] distanceMatrix = DataLoader.load(Paths.get("chapter5_data", name + ".txt"));
 
 			ConcurrentGeneticAlgorithm concurrentGeneticAlgorithm = new ConcurrentGeneticAlgorithm(distanceMatrix,
 					generations, individuals);

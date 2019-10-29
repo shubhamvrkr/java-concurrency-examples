@@ -58,7 +58,7 @@ public class SerialBenchmark {
 	
 	@Setup
 	public void init() {
-		Path path = Paths.get("data","bank-additional-full.csv");
+		Path path = Paths.get("chapter7_data/example1","bank-additional-full.csv");
 		try {
 			records = SerialDataLoader.load(path);
 		} catch (IOException e) {

@@ -61,7 +61,7 @@ public class MyBenchmark {
     @Setup(Level.Invocation)
     public void init() {
 
-        Path path = Paths.get("data", "amazon-meta.csv");
+        Path path = Paths.get("chapter6_data/example3", "amazon-meta.csv");
         data = AmazonMetaDataLoader.load(path);
 
     }

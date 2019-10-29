@@ -23,7 +23,7 @@ public class SerialSearch {
 
 	public static void basicSearch(String query[]) throws IOException {
 
-		Path path = Paths.get("index", "invertedIndex.txt");
+		Path path = Paths.get("chapter7_data/example2/index", "invertedIndex.txt");
 		HashSet<String> set = new HashSet<>(Arrays.asList(query));
 		QueryResult results = new QueryResult(new HashMap<>());
 
@@ -47,7 +47,7 @@ public class SerialSearch {
 	}
 
 	public static void reducedSearch(String query[]) throws IOException {
-		Path path = Paths.get("index", "invertedIndex.txt");
+		Path path = Paths.get("chapter7_data/example2/index", "invertedIndex.txt");
 		HashSet<String> set = new HashSet<>(Arrays.asList(query));
 		QueryResult results = new QueryResult(new HashMap<>());
 
@@ -72,7 +72,7 @@ public class SerialSearch {
 	}
 
 	public static void htmlSearch(String query[], String fileName) throws IOException {
-		Path path = Paths.get("index", "invertedIndex.txt");
+		Path path = Paths.get("chapter7_data/example2/index", "invertedIndex.txt");
 		HashSet<String> set = new HashSet<>(Arrays.asList(query));
 		QueryResult results = new QueryResult(new HashMap<>());
 
@@ -84,7 +84,7 @@ public class SerialSearch {
 				.flatMap(SerialSearch::limitedMapper)
 				.forEach(results::append);
 
-			path = Paths.get("output", fileName + "_results.html");
+			path = Paths.get("chapter7_data/example2/output", fileName + "_results.html");
 			try (BufferedWriter fileWriter = Files.newBufferedWriter(path, StandardOpenOption.CREATE)) {
 
 				fileWriter.write("<HTML>");

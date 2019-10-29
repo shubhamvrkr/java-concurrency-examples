@@ -17,7 +17,7 @@ public class ConcurrentMain {
 		int individuals = Integer.valueOf(args[1]);
 
 		for (String name : new String[] { "lau15_dist", "kn57_dist" }) {
-			int[][] distanceMatrix = DataLoader.load(Paths.get("chapter5_data/example1", name + ".txt"));
+			int[][] distanceMatrix = DataLoader.load(Paths.get("chapter5_data", name + ".txt"));
 
 			ConcurrentGeneticAlgorithm concurrentGeneticAlgorithm = new ConcurrentGeneticAlgorithm(distanceMatrix, generations,
 					individuals);

@@ -65,7 +65,7 @@ public class MyBenchmark {
 	
 	@Setup
 	public void init() {
-		Path path = Paths.get("data","census-income.data");
+		Path path = Paths.get("chapter6_data/example2","census-income.data");
 
 		data = CensusDataLoader.load(path);
 		System.out.println("Number of items: " + data.length);
